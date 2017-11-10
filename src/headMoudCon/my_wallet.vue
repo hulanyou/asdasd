@@ -14,12 +14,12 @@
       <div class="h-compare">
       <div class="slide-nav2 fl">
         <ul>
-          <li class="active nav-li"><router-link to="/my_wallet/" tag="a">代金券</router-link></li>
-          <li class="nav-li"><router-link to="/my_account" tag="a">我的账户</router-link></li>
-          <li class="nav-li"><router-link to="/insurance" tag="a">社会医疗保险</router-link></li>
-          <li class="nav-li"><router-link to="/fund" tag="a">慈善救助基金</router-link></li>
-          <li class="nav-li"><router-link to="/insurance" tag="a">我的保险</router-link></li>
-          <li class="nav-li"><router-link to="/add_insurance" tag="a">添加保险</router-link></li>
+          <router-link to="/my_wallet" tag="li" active-class="active">代金券</router-link>
+          <router-link to="/my_account" tag="li" active-class="active">我的账户</router-link>
+          <router-link to="/insurance" tag="li" active-class="active">社会医疗保险</router-link>
+          <router-link to="/relief_fund" tag="li" active-class="active">慈善救助基金</router-link>
+          <router-link to="/my_insurance" tag="li" active-class="active">我的保险</router-link>
+          <router-link to="/add_insurance" tag="li" active-class="active">添加保险</router-link>
         </ul>
       </div>
       <router-view></router-view>
@@ -39,26 +39,6 @@
 // 右边医嘱信息和健康头条
 import report_r from '@/healthRepor/report_r'
 export default {
-  methods:{
-    isshow () {
-      var lis = document.querySelectorAll('.nav-li')
-            for(var i=0;i<lis.length;i++){
-                lis[i].onclick = function(){
-                    for(var i=0;i<lis.length;i++) {
-                        if (this == lis[i]) {
-                            lis[i].className = "active";
-                        }
-                        else {
-                            lis[i].className = "";
-                        }
-                    }
-                }
-            }
-    }
-  },
-  mounted(){
-    this.isshow();
-  },
   components:{
     report_r
   }

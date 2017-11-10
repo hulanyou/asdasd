@@ -75,7 +75,8 @@
               <li v-for="(item,index) in tabs" :class="{active:index == num}"  @mouseenter="tab(index)">{{item}}</li>
           </ul>
         </nav>
-        <div class="forum-box flex">
+        <div class="forum-box">
+          <div class="">
             <ul v-for='(itemCon,index) in tabContents'
 v-show=" index == num" :key="index" class="box_ul">
               <li>
@@ -96,6 +97,8 @@ v-show=" index == num" :key="index" class="box_ul">
                 </a>
               </li>
 </ul>
+          </div>
+
         <div class="ad-box">
           <div><a href="##"><img src="../assets/img/adimg/ad_box1.jpg" alt=""></a></div>
         </div>
@@ -324,13 +327,17 @@ h3.h-tit1 .more:before {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.forum-box{
+  width: 1200px;
+  display: flex;
+}
 .forum-box .box_ul{
     width: 892px;
 }
 .box_ul li{
   width: 100%;
   padding: 14px 0;
-
+  border: 1px solid #e8e8e8;
 }
 .box_ul .pic {
     width: 200px;
@@ -379,10 +386,12 @@ p.money {
 }
 .ad-box {
     width: 25%;
+    margin-top: -20px;
 }
 .ad-box img {
     width: 100%;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 /*.inner-footer {
     clear: both;

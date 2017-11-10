@@ -7,8 +7,8 @@
     <router-link to="/health_check" tag="a" active-class="active">健康检查</router-link>
     <router-link to="/evaluation_diagnosis" tag="a" active-class="active">评估诊断</router-link>
     <router-link to="/re_treatment" tag="a" active-class="active">治疗康复</router-link>
-    <router-link to="/##" tag="a" active-class="active">预防保健</router-link>
-    <router-link to="/##" tag="a" active-class="active">健康饮食</router-link>
+    <router-link to="/Preven_care" tag="a" active-class="active">预防保健</router-link>
+    <router-link to="/healthy_diet" tag="a" active-class="active">健康饮食</router-link>
     <router-link to="/mall_index" tag="a" active-class="active">健康商城</router-link>
     <router-link to="/hospital_index" tag="a" active-class="active">医院医生</router-link>
   </div>

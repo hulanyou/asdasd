@@ -194,4 +194,7 @@ export default {
     margin: 20px 0 0 136px;
     width: 100px;
 }
+.h_bank:nth-of-type(2){
+  margin-top: 20px;
+}
 </style>

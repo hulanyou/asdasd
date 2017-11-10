@@ -13,9 +13,9 @@
           </div>
           <nav class="nav-tabs">
             <ul class="tab-style1">
-               <li class="active nav-li"><router-link  to="/my_account" tag="a">资产明细</router-link></li>
-               <li class="nav-li"> <router-link to="/my_account/recharge" tag="a">账户充值</router-link></li>
-               <li class="nav-li"> <router-link to="/my_account/withdrawals" tag="a">余额提现</router-link></li>
+               <router-link  to="/my_account/mingxi" tag="li" active-class="active">资产明细</router-link>
+                <router-link to="/my_account/recharge" tag="li" active-class="active">账户充值</router-link>
+               <router-link to="/my_account/withdrawals" tag="li" active-class="active">余额提现</router-link>
            </ul>
           </nav>
             <router-view></router-view>

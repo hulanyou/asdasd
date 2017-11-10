@@ -611,6 +611,27 @@ button.close {-webkit-appearance: none; padding: 0; cursor: pointer; background:
 .modal-sm .cart-add-addr dt{width:25%;}
 .modal-sm .cart-add-addr dd select{width:100%;}
 .modal-sm .cart-add-addr dd input{width:89%;margin-right:0;}
+/*进度条*/
+.cart_step {
+    width: 640px;
+}
+.cart_step {
+    margin: 45px auto;
+    overflow: hidden;
+}
+.cart_step_1 div {
+    background-position: 0 0;
+}
+.cart_step ul {
+    width: 100%;
+}
+.cart_step li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+}
+
 /*-----全局重置结束-------*/
 /*--------盒模型兼容开始-------*/
 .flex {

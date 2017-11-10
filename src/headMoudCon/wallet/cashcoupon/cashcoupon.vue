@@ -9,8 +9,8 @@
       </div>
       <nav class="nav-tabs">
           <ul class="tab-style1">
-            <li class="active tap_li"><router-link to="/my_wallet" tag="a">资产明细</router-link></li>
-            <li class="tap_li"><router-link to="/my_wallet/details" tag="a" >代金券绑定</router-link></li>
+            <router-link to="/my_wallet/my_qb" tag="li" active-class="active">资产明细</router-link>
+            <router-link to="/my_wallet/details" tag="li" active-class="active">代金券绑定</router-link>
          </ul>
         </nav>
         <router-view></router-view>
