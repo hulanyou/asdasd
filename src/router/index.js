@@ -10,10 +10,23 @@ export default new Router({
             {path:'/',component:resolve => {require(['@/home/homeCon'],resolve)}},
             // 家庭医生
             {path:'/my_doctors',component:resolve => {require(['@/home/family_boctor'],resolve)}},
+            // 家庭医生二级页面
+            {path:'/my_doctors/my_doctorst',component:resolve => {require(['@/home/family_boctort'],resolve)}},
+            // 家庭医生更多
+            {path:'/my_doctors/boctor_more',component:resolve => {require(['@/home/family_boctortzj/boctor_more'],resolve)}},
             // 专家医生
             {path:'/my_doctors_expert2',component:resolve => {require(['@/home/expert_physician'],resolve)}},
+            // 专家医生二级
+            {path:'/my_doctors_expert2/my_doctors_expert',component:resolve => {require(['@/home/my_doctors_expert'],resolve)}},
             // 我的医生
-            {path:'/doctors',component:resolve => {require(['@/home/doctors'],resolve)}},
+            {path:'/doctors',component:resolve => {require(['@/home/doctors'],resolve)},
+            children:[
+              {path:'/',redirect:'my_doctors'},
+              {path:'my_doctors',component:resolve => {require(['@/home/export_doctortzj/emy_doctors'],resolve)}},
+              {path:'my_doctors_expert2',component:resolve => {require(['@/home/export_doctortzj/emy_doctors_expert2'],resolve)}},
+              {path:'expert_consultation',component:resolve => {require(['@/home/export_doctortzj/expert_consultation'],resolve)}},
+            ]
+          },
             // 健康检查
             {path:'/health_check',component:resolve => {require(['@/home/healt_hexamination'],resolve)}},
             // 评估诊断

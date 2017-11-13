@@ -16,7 +16,7 @@
             <p class="hos-name">高杨树社区医院</p>
             <p class="hos-name"> 挂号、电话、上门、视频、图文</p>
             <p class="skill w-80">医生简介：擅长脑血管疾病、中毒性和放射性脑病、老年性及血管性痴呆、 感染性性神经系统疾病、周围性神经疾病及肌肉...
-              <router-link to="/my_doctors/boctor_more" tag="a" class="read-more">更多</router-link>
+              <router-link to="/boctor_more" tag="a" class="read-more">更多</router-link>
             </p>
           </div>
           <a class="btn btn-custom5" @click="isshow=!isshow">解除签约</a>
@@ -528,7 +528,7 @@
           您是否确认解除当前家庭医生？
        </div>
        <div class="modal-footer">
-           <router-link to="/my_doctors/my_doctorst" tag="a" class="btn btn-custom" @click="isshow=!isshow">确定</router-link>
+           <router-link to="/my_doctorst" tag="a" class="btn btn-custom" @click="isshow=!isshow">确定</router-link>
            <!-- <button class="btn btn-custom" @click="isshow=!isshow"></button> -->
            <button type="button" class="btn btn-custom3" @click="isshow=!isshow">取消</button>
        </div>
