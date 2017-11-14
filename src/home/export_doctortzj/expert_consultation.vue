@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    33
+    我的专家会诊
   </div>
 </template>
 

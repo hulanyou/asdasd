@@ -29,6 +29,8 @@ export default new Router({
           },
             // 健康检查
             {path:'/health_check',component:resolve => {require(['@/home/healt_hexamination'],resolve)}},
+            // 健康检查购买页面
+            {path:'/health_checkDetails',component:resolve => {require(['@/home/health_checkDetails'],resolve)}},
             // 评估诊断
             {path:'/evaluation_diagnosis',component:resolve => {require(['@/home/evaluation_diagnosis'],resolve)}},
             // 健康治疗

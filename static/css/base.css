@@ -710,6 +710,13 @@ button.close {-webkit-appearance: none; padding: 0; cursor: pointer; background:
   -o-align-content: center;
   align-content: center;
 }
+/*允许换行*/
+.flex_wraps {
+  -webkit-flex-wrap:wrap;
+  -moz-flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+  -o-flex-wrap:wrap;
+}
 /*--------盒模型兼容结束-------*/
 /*------小调整设置开始-----*/
 .float_L {

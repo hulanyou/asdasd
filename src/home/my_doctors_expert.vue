@@ -24,8 +24,33 @@
 
         <div class="result m_mt20">
           <h3 class="tit-w border-b">常规服务:</h3>
-          <ul class="ways ways2">
-            <li class="fl ishide">
+          <ul class="ways ways2 flex flex_wraps">
+            <li class="ishide">
+              <div class="icon"><img src="../assets/img/icons/way06.png" alt=""></div>
+              <div class="btn">预约挂号</div>
+              <div class="health-way">
+                <div class="tit">预约挂号排班</div>
+                <ul>
+                  <li class="clear clearfix">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="ishide">
               <div class="icon"><img src="../assets/img/icons/way06.png" alt=""></div>
               <div class="btn">预约挂号</div>
               <div class="health-way">
@@ -50,7 +75,57 @@
                 </ul>
               </div>
             </li>
-            <li class="fl ishide">
+            <li class="ishide">
+              <div class="icon"><img src="../assets/img/icons/way06.png" alt=""></div>
+              <div class="btn">预约挂号</div>
+              <div class="health-way">
+                <div class="tit">预约挂号排班</div>
+                <ul>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="ishide">
+              <div class="icon"><img src="../assets/img/icons/way06.png" alt=""></div>
+              <div class="btn">预约挂号</div>
+              <div class="health-way">
+                <div class="tit">预约挂号排班</div>
+                <ul>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                  <li class="clear">
+                    <p class="fl">02月23日<span>星期四 08:00-20:00</span></p>
+                    <a href="checkout.html" class="btn btn-custom2 fr">预约</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="ishide">
               <div class="icon"><img src="../assets/img/icons/way07.png" alt=""></div>
               <div class="btn">上门服务</div>
               <div class="health-way">
@@ -86,17 +161,17 @@
                 </ul>
               </div>
             </li>
-            <li class="fl ishide">
+            <li class="ishide">
               <div class="icon"><img src="../assets/img/icons/way08.png" alt=""></div>
               <div class="btn">电话咨询</div>
               <div class="health-way"></div>
             </li>
-            <li class="fl ishide">
+            <li class="ishide">
               <div class="icon"><img src="../assets/img/icons/way09.png" alt=""></div>
               <div class="btn">视频咨询</div>
                 <div class="health-way"></div>
             </li>
-            <li class="fl ishide">
+            <li class="ishide">
               <div class="icon"><img src="../assets/img/icons/way10.png" alt=""></div>
               <div class="btn">图文咨询</div>
                 <div class="health-way"></div>
@@ -104,7 +179,7 @@
           </ul>
         </div>
 
-        <div class="forum-box m_mt20">
+        <div class="forum-box m_mt20 clearfix">
           <h3 class="tit-w border-b">XX政府规定项目:</h3>
           <ul>
             <li>
@@ -525,10 +600,10 @@
            <h4 class="modal-title">编辑信息</h4>
        </div>
        <div class="modal-body cart-add-addr">
-          您是否确认解除当前家庭医生？
+          您是否确认解除当前专家医生？
        </div>
        <div class="modal-footer">
-           <router-link to="/my_doctorst" tag="a" class="btn btn-custom" @click="isshow=!isshow">确定</router-link>
+           <router-link to="/my_doctors_expert2" tag="a" class="btn btn-custom" @click="isshow=!isshow">确定</router-link>
            <!-- <button class="btn btn-custom" @click="isshow=!isshow"></button> -->
            <button type="button" class="btn btn-custom3" @click="isshow=!isshow">取消</button>
        </div>
@@ -590,6 +665,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.ways2 li:hover{
+  background: #e8e8e8;
+}
 .h-doctorms {
     position: relative;
     clear: both;
@@ -664,9 +742,8 @@ h3.tit-w {
 .result .ways {
     width: 100%;
     text-align: center;
-    height: 140px;
 }
-.result .ways li.fl {
+.result .ways li{
     width: 20%;
     height: 140px;
     position: relative;

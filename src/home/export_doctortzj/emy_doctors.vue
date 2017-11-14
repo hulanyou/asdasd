@@ -196,6 +196,11 @@ export default {
     width: 22%;
     margin-right: 2%;
 }
+.list-box .list .money {
+    font-size: 20px;
+    color: #f71231;
+    margin-top: 5px;
+}
 .list-box li {
     position: relative;
     text-align: center;

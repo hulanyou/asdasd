@@ -590,6 +590,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.ways2 li:hover{
+  background: #e8e8e8;
+}
 .h-doctorms {
     position: relative;
     clear: both;
