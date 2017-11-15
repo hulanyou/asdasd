@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <div class="h-storetbox">
-	<div class="container m_mt30">
+	<div class="container m_top">
 		<div class="store-left fl">
       <!-- 放大镜-->
       <div class="zoom-box"><!-- 容器-->
@@ -23,7 +23,7 @@
     <img :src="img01"/>
  </div>
 </div>
-		</div>
+	</div>
 		<div class="store-des fr">
 			<h2 class="y_pdname">18-50岁 女性 适用于评估怀孕中母体基因患病风险</h2>
 			<h3>18-50岁 女性 适用于评估怀孕中母体基因患病风险</h3>
@@ -37,8 +37,8 @@
 				<div class="dd">
 					<span class="fl">北京 至</span>
 					<div class="y_sendarea fl">
-						<span class="y_areasure">北京省<i></i></span>
-						<div class="y_areabox">
+						<span class="y_areasure">北京省<i @click="selectshow = !selectshow"></i></span>
+						<div class="y_areabox" v-show="selectshow">
 							<select class="form-control">
 								<option>北京省</option>
 							</select>
@@ -48,7 +48,7 @@
 							<select class="form-control">
 								<option>海淀区</option>
 							</select>
-							<b class="y_arelose">x</b>
+							<b class="y_arelose" @click="selectshow = !selectshow">x</b>
 						</div>
 					</div>
 					<p class="fl">快递：¥10.0</p>
@@ -58,10 +58,10 @@
 				<li>
 					<span class="tag fl">选择基因检测产品</span>
 					<div class="opt">
-						<div class="item active">
+						<div class="item" :class="{active:key==0}" @click="tap(0)">
 							<p><span class="fl">博奥颐和</span><span class="fr">+ RBM 1200</span></p>
 						</div>
-						<div class="item">
+						<div class="item"  :class="{active:key==1}" @click="tap(1)">
 							<p><span class="fl">博奥颐和</span><span class="fr">+ RBM 1200</span></p>
 						</div>
 					</div>
@@ -69,10 +69,10 @@
 				<li>
 					<span class="tag fl">选择采样方式</span>
 					<div class="opt">
-						<div class="item">
+						<div class="item" :class="{active:keys==0}" @click="tapt(0)">
 							<p><span class="fl">快递采样</span></p>
 						</div>
-						<div class="item">
+						<div class="item" :class="{active:keys==1}" @click="tapt(1)">
 							<p><span class="fl">上门采样</span><span class="fr">+ RBM 200</span></p>
 						</div>
 					</div>
@@ -80,17 +80,17 @@
 				<li>
 					<span class="tag fl">更高级的评估服务</span>
 					<div class="opt">
-						<div class="item">
+						<div class="item" :class="{active:keyss==0}" @click="taps(0)">
 							<p><span class="fl">国家内专家团诊断报告</span><span class="fr">+ RBM 300</span></p>
 						</div>
-						<div class="item">
+						<div class="item" :class="{active:keyss==1}" @click="taps(1)">
 							<p><span class="fl">国家内专家团诊断报告</span><span class="fr">+ RBM 500</span></p>
 						</div>
 					</div>
 				</li>
 			</ul>
 			<div class="srore-btn m_mt20">
-				<a href="##" class="btn btn-custom5" data-toggle="modal">立即购买</a>
+				<a href="##" class="btn btn-custom5" @click="isshow=!isshow">立即购买</a>
 				<a href="##" class="store_up cur"><span></span>收藏</a>
 				<a href="##" class="share"><span></span>分享</a>
 			</div>
@@ -102,12 +102,12 @@
 	<div class="h_dright">
       	<div class="tabtit">
 	    		<ul class="tab_style2 clearfix">
-	      		<li class="active"><a href="#tab1" data-toggle="tab">商品详情</a></li>
-	      		<li><a href="#tab2" data-toggle="tab">商品评价</a></li>
+	      		<li :class="{active:num==0}" @click="detail(0)"><a>商品详情</a></li>
+	      		<li :class="{active:num==1}" @click="evaluat(1)"><a>商品评价</a></li>
 	      	</ul>
       	</div>
-      	<div class="tab-content">
-      		<div id="tab1" class="tab-pane active">
+      	<div class="tab-content" v-show="details">
+      		<div class="tab-pane active">
 			    <section class="h_hos_des">
 					<div><img src="../assets/img/adimg/jc01.jpg"></div>
 					<div class="founder">
@@ -187,14 +187,40 @@
 					</div>
 				</section>
       		</div>
-      		<div id="tab2" class="tab-pane">
-      			商品评价
-      		</div>
       	</div>
+        <div class="tab-pane" v-show="evaluate">
+          商品评价
+        </div>
      </div>
 </div>
 <!--商品描述 end -->
-
+<!-- 弹出框 -->
+<div class="modal-open fadeIn" v-show="isshow">
+<div class="modal-dialog modal-sm">
+   <div class="modal-content">
+     <div class="modal-header">
+         <button type="button" class="close" @click="isshow=!isshow"><span aria-hidden="true">×</span></button>
+         <h4 class="modal-title">编辑信息</h4>
+     </div>
+     <div class="modal-body">
+        <p class="tip">该商品和服务涉及到终生健康管理服务的准确性和完整性，购买者和使用者必须是同一个人，请您明确是为本人购买还是为家人购买</p>
+        <div class="select-opt">
+        	<label><input name="buy" type="radio" value="">为自己购买</label>
+        </div>
+        <div class="select-opt">
+        	<label><input name="buy" type="radio" value="">为爸爸购买
+        </label></div>
+     </div>
+     <div class="modal-footer">
+       <div class="btn-select m_mt20 clearfix">
+         <router-link to="/purchase/checkout_head" tag="a" class="btn  btn-custom5 btn-custom6 fl">立即购买</router-link>
+          <router-link to="/purchase/add_family" tag="a" class="btn btn-custom3 fr">添加家人</router-link>
+       </div>
+     </div>
+   </div>
+</div>
+</div>
+<!-- End 弹出框 -->
   </div>
 </template>
 
@@ -205,10 +231,37 @@ export default {
       img01:'../../static/images/01.jpg',
       img011:'../../static/images/01.jpg',
       img03:'../../static/images/03.jpg',
-      img033:'../../static/images/03.jpg'
+      img033:'../../static/images/03.jpg',
+      selectshow:false,
+      isshow:false,
+      key:0,
+      keys:0,
+      keyss:0,
+      details:true,
+      evaluate:false,
+      num:0
     }
   },
   methods:{
+    evaluat(b){
+      this.details=false;
+      this.evaluate=true;
+      this.num=b;
+    },
+    detail(x){
+      this.evaluate=false;
+      this.details=true;
+      this.num=x;
+    },
+    tap(index){
+      this.key=index;
+    },
+    tapt(inde){
+      this.keys=inde;
+    },
+    taps(ind){
+      this.keyss=ind;
+    },
     qie(){
       this.img01=this.img03;
     },
@@ -288,6 +341,32 @@ export default {
 </script>
 
 <style lang="css" scoped>
+/*弹框样式*/
+.modal-body{
+  padding: 0;
+}
+.modal-footer{
+  margin-top: 0;
+}
+.modal-dialog p.tip {
+    margin: 15px;
+    color: #f71231;
+    font-size: 12px;
+}
+.modal-dialog .select-opt {
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+    font-size: 16px;
+}
+.modal-dialog .select-opt input {
+    margin-top: -2px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.m_top{
+  margin-top: 30px;
+}
 /*放大镜*/
 .zoom-box{
             width: 420px;
@@ -300,6 +379,7 @@ export default {
         .small-box img{
             width: 100%;
             height: 100%;
+
         }
         .small-box .square{
             position: absolute;
@@ -360,14 +440,12 @@ export default {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 10;
         }
 
 .h-storetbox {
     clear: both;
     overflow: hidden;
-}
-store-left {
-    width: 35%;
 }
 .store-left {
     width: 35%;
@@ -435,8 +513,8 @@ store-left {
 }
 .y_sendareabx .y_sendarea .y_areabox {
     border: 1px solid #e8e8e8;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: inherit;
     position: absolute;
     width: 400px;
     background: #fff;
@@ -449,6 +527,10 @@ store-left {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.y_sendareabx .y_sendarea .cur {
+    opacity: 1;
+    visibility: visible;
+}
 .y_sendareabx select {
     height: 28px;
     line-height: 28px;
@@ -459,13 +541,13 @@ store-left {
     margin-left: 2.5%;
     padding-right: 0;
     font-weight: lighter;
+    line-height: 28px;
 }
 .form-control {
     box-shadow: none;
     border-radius: 0;
     padding: 7px 10px;
     font-size: 12px;
-    color: #555;
     background-color: #fff;
     background-image: none;
     border: 1px solid #e8e8e8;
@@ -476,11 +558,28 @@ store-left {
     transition: all .3s ease-in-out;
 }
 option {
+  color: #000;
     font-weight: normal;
     display: block;
     white-space: pre;
     min-height: 1.2em;
     padding: 0px 2px 1px;
+}
+.y_sendareabx .y_arelose {
+    text-align: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: normal;
+    background: #666;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 .store-des .select-service {
     padding-top: 20px;
@@ -547,6 +646,9 @@ option {
     background-color: #f71231;
     padding: 8px 80px;
 }
+.btn-custom5{
+    padding: 8px 30px;
+}
 .store-des .srore-btn a {
     width: 170px;
     margin-left: 12px;
@@ -568,5 +670,81 @@ a.share span {
     vertical-align: middle;
     margin-top: -3px;
 }
-
+.h_dright {
+    width: 1200px;
+    margin-top: 50px;
+}
+.tabtit {
+    height: 40px;
+    border: 1px solid #e8e8e8;
+    margin-top: 20px;
+    background: #fff;
+}
+.tab_style2 li {
+    float: left;
+    position: relative;
+    text-align: center;
+}
+.tab_style2 li.active a {
+    color: #10acff;
+    border: 2px solid #10acff;
+    border-bottom: none;
+    background: #fff;
+    padding: 10px 30px 8px;
+}
+.tab_style2 li a {
+    margin-left: -1px;
+    border-right: 1px solid #e8e8e8;
+    padding: 10px 30px 9px;
+    color: #333333;
+    display: inline-block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.tab_style2 li a:hover{
+  color: #10acff;
+}
+.tab-content > .active {
+    display: block;
+}
+.tab-content {
+    padding: 25px 0px 50px;
+    background: #fff;
+}
+.h_hos_des {
+    overflow: hidden;
+}
+.h_hos_des img {
+    width: 100%;
+    display: block;
+}
+.h_hos_des h3.tit3 {
+    text-align: center;
+    margin: 0;
+    display: block;
+    letter-spacing: 5px;
+    font-weight: normal;
+    line-height: 160px;
+    font-size: 30px;
+}
+.h_hos_des img {
+    width: 100%;
+    display: block;
+}
+.h_hos_des p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 25px;
+    margin: 20px 20px 0;
+    letter-spacing: 2px;
+}
+.h_hos_des .des {
+    padding: 20px 20px 0;
+    background: #fff;
+}
 </style>

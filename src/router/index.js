@@ -43,7 +43,6 @@ export default new Router({
             {path:'/mall_index',component:resolve => {require(['@/home/mall_index'],resolve)}},
             // 医院医生
             {path:'/hospital_index',component:resolve => {require(['@/home/hospital_index'],resolve)}},
-
             // 健康报告路由
             // 我自己的
             {path:'/report_myself',component:resolve => {require(['@/healthRepor/report_myself'],resolve)}},
@@ -113,5 +112,14 @@ export default new Router({
           {path:'register_success',component:resolve => {require(['@/login/register_success'],resolve)}},
       ]
     },
+    // 健康检查立即购买
+    {path:'/purchase',component:resolve => {require(['@/purchase/purchase_head'],resolve)},
+    children:[
+      {path:'checkout_head',component:resolve => {require(['@/purchase/checkout_head'],resolve)}},
+      // 健康检查添加家人购物车
+      {path:'add_family',component:resolve => {require(['@/purchase/add_family'],resolve)}},
+    ]
+  },
+
   ]
 })

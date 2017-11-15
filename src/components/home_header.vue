@@ -22,7 +22,7 @@
   <div class="h-header layout">
     <div class="container">
       <div class="h-logo fl">
-          <router-link to="/index" tag="a"><img src="../assets/img/logo.jpg" alt=""></router-link>
+          <router-link to="/" tag="a"><img src="../assets/img/logo.jpg" alt=""></router-link>
       </div>
       <div class="h-nav2 fl">
         <administration></administration>
@@ -43,8 +43,6 @@
         <a href="##" class="btn_srh"  name="submit">搜索</a>
       </div>
     </div>
-
-
   </div>
   <!-- 头部搜索框 end -->
 
@@ -53,7 +51,6 @@
     <div class="container">
       <navbar></navbar>
     </div>
-
   </div>
   </div>
   <!--头部导航条 end-->
@@ -382,8 +379,5 @@ export default {
 .h-banner a:hover,
 .h-banner a.active {
   color: #179aff;
-}
-.el-select{
-
 }
 </style>
