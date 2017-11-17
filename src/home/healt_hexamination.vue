@@ -3,7 +3,7 @@
     <!--健康论坛-->
    <div class="layout">
     <div class="container m_mt30">
-      <div class="left-73 fl border right-height">
+      <div class="left-73 fl right-height">
          <div class="slide-nav2 fl">
           <ul>
             <li class="active">基因测序</li>
@@ -169,6 +169,19 @@
              </router-link>
           </ul>
         </div>
+        <!--分页-->
+        <div class="block">
+         <el-pagination
+           @size-change="handleSizeChange"
+           @current-change="handleCurrentChange"
+           :current-page="currentPage4"
+           :page-sizes="[10]"
+           :page-size="10"
+           layout="total, sizes, prev, pager, next, jumper"
+           :total="100">
+         </el-pagination>
+       </div>
+       <!-- 分页 End -->
       </div>
       <div class="ad-box fr">
         <familyboctortr></familyboctortr>
@@ -181,6 +194,19 @@
 <script>
 import familyboctortr from '@/home/family_boctortzj/family_boctortr'
 export default {
+  methods: {
+     handleSizeChange(val) {
+       console.log(`每页 ${val} 条`);
+     },
+     handleCurrentChange(val) {
+       console.log(`当前页: ${val}`);
+     }
+   },
+   data() {
+     return {
+        currentPage4: 4
+     };
+   },
   components:{
     familyboctortr
   }
@@ -188,6 +214,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.layout{
+  padding-bottom: 50px;
+}
+.block{
+  margin-left: 120px;
+  margin-bottom: 50px;
+}
 .mar{
   margin-left: 150px;
 }

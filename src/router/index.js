@@ -33,13 +33,13 @@ export default new Router({
             {path:'/health_checkDetails',component:resolve => {require(['@/home/health_checkDetails'],resolve)}},
             // 评估诊断
             {path:'/evaluation_diagnosis',component:resolve => {require(['@/home/evaluation_diagnosis'],resolve)}},
-            // 健康治疗
+            // 治疗康复
             {path:'/re_treatment',component:resolve => {require(['@/home/re_treatment'],resolve)}},
             // 预防保健
             {path:'/Preven_care',component:resolve => {require(['@/home/Preven_care'],resolve)}},
             // 健康饮食
             {path:'/healthy_diet',component:resolve => {require(['@/home/healthy_diet'],resolve)}},
-            // 商城
+            // 健康商城
             {path:'/mall_index',component:resolve => {require(['@/home/mall_index'],resolve)}},
             // 医院医生
             {path:'/hospital_index',component:resolve => {require(['@/home/hospital_index'],resolve)}},
@@ -115,9 +115,14 @@ export default new Router({
     // 健康检查立即购买
     {path:'/purchase',component:resolve => {require(['@/purchase/purchase_head'],resolve)},
     children:[
+      // 立即购买
       {path:'checkout_head',component:resolve => {require(['@/purchase/checkout_head'],resolve)}},
       // 健康检查添加家人购物车
       {path:'add_family',component:resolve => {require(['@/purchase/add_family'],resolve)}},
+      // 核对订单信息
+      {path:'checkout_shiwu',component:resolve => {require(['@/purchase/checkout_shiwu'],resolve)}},
+      // 提交订单
+      {path:'order_success',component:resolve => {require(['@/purchase/order_success'],resolve)}},
     ]
   },
 

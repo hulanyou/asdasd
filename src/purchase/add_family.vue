@@ -54,7 +54,7 @@
 									<dt>&nbsp;</dt>
 									<dd>
 										<button type="button" class="btn btn-custom2 btn-sm">确定</button>
-										<a href="#" class="btn btn-link btn-sm">取消</a>
+										<a href="#" class="btn btn-link btn-sm" @click="ishide=!ishide">取消</a>
 									</dd>
 								</dl>
 							</div>
@@ -72,7 +72,7 @@
 				<td width="12%"><span class="f-color3">¥49</span></td>
 				<td class="y_lasttd">
 					<a href="#" class="add-cart">加入收藏夹</a><br>
-					<a class="del" data-toggle="modal">删除</a>
+					<a class="del" @click="isshow=!isshow">删除</a>
 				</td>
 			</tr>
 		</tbody>
@@ -86,9 +86,28 @@
   		<li class="fr">
   			已选商品 <span>0</span> 件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   			合计(不含运费)：<span>¥<b>49.00</b></span>
-  			<a href="checkout_shiwu.html" class="btn btn-custom5">去结算</a>
+        <router-link to="/purchase/checkout_shiwu" tag="a"  class="btn btn-custom5">去结算</router-link>
+  			<!-- <a href="checkout_shiwu.html" class="btn btn-custom5">去结算</a> -->
   		</li>
   	</ul>
+    <div class="modal-open fadeIn" v-show="isshow">
+<div class="modal-dialog modal-sm">
+   <div class="modal-content">
+     <div class="modal-header">
+         <button type="button" class="close" @click="isshow=!isshow"><span aria-hidden="true">×</span></button>
+         <h4 class="modal-title">编辑信息</h4>
+     </div>
+     <div class="modal-body cart-add-addr">
+        确认要删除该宝贝吗？
+     </div>
+     <div class="modal-footer">
+         <button class="btn btn-custom" @click="isshow=!isshow">确定</button>
+         <button type="button" class="btn btn-custom3" @click="isshow=!isshow">删除</button>
+     </div>
+   </div>
+</div>
+</div>
+<!-- End 弹出框 -->
   </div>
 </template>
 
@@ -98,6 +117,7 @@ export default {
   data(){
     return{
       ishide:false,
+      isshow:false,
       num:0,
       nums:0
     }
@@ -201,11 +221,11 @@ export default {
     padding: 0;
 }
  .active{
-   border: 1px dashed red;
+   border: 1px dashed #eb5e58;
    background: #fff;
  }
  .act{
-  background-color: red;
+  background-color: #eb5e58;
  }
 .cart_reviseBox {
     position: relative;
@@ -343,8 +363,8 @@ export default {
 .cart-table td.y_lasttd {
     border-right: 1px solid #e8e8e8;
 }
-.y_firsttd fl{
-  padding-left: 10px;
+.y_firsttd .fl{
+  padding-right: 10px;
 }
 .cart_control {
     width: 100%;

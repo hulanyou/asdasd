@@ -35,20 +35,15 @@
   <table class="cart-table y_checktable">
 			<tbody>
 			<tr class="first">
-        <td width="42%" class="y_firsttd">
-						<div class="pic">
-							<a href="#"><img src="../assets/img/adimg/03.jpg" alt=""></a>
-						</div>
-						<div class="name">
-							<a href="#">18-50岁 女性 适用于评估怀孕中母体基因患病风险</a>
-							<span class="sx">
-								18-50岁 女性 适用于评估怀孕中母体基因患病风险
-							</span>
-							<span class="sx">
-								采样方式：血液  怀孕12-14周检测一次
-							</span>
-						</div>
-					</td>
+				<td width="37%" class="y_firsttd">
+					<div class="pic">
+						<a href="#"><img src="../assets/img/adimg/stonic-x001.jpg" alt=""></a>
+					</div>
+					<div class="name">
+						<a href="#">新康泰克氨麻美敏 片(II)感冒药</a>
+						<span class="sx">头痛流涕鼻塞咳嗽感冒灵冲剂药</span>
+					</div>
+				</td>
 				<td width="15%">
 					规格:20粒/瓶
 				</td>
@@ -131,7 +126,7 @@
 	  	</table>
       <div class="y_cartsetment">
 	  		<div class="cart2_price">
-	  			<p>实付款：<strong>¥1139.00</strong></p>
+	  			<p>实付款：<strong>¥39.00</strong></p>
 			  </div>
 	  	</div>
       <div class="cart_btn">

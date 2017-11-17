@@ -102,6 +102,7 @@
            :total="100">
          </el-pagination>
        </div>
+       <!-- 分页 End -->
       </div>
       <div class="fr h-remind">
         <!-- 医嘱 -->
