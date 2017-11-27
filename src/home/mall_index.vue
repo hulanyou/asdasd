@@ -847,10 +847,18 @@ export default {
        for (let i = 0; i < boxs.length; i++) {
          boxs[i].onmouseenter=function(){
             cons[i].style.display = 'block';
-         }
+         };
          boxs[i].onmouseleave=function(){
             cons[i].style.display = 'none';
-         }
+         };
+         cons[i].onmouseenter=function(){
+           console.log(1);
+           cons[i].style.display='block';
+         };
+         cons[i].onmouseleave=function(){
+           console.log(2);
+           cons[i].style.display='none';
+         };
        }
      }
   },

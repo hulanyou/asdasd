@@ -43,6 +43,10 @@ export default new Router({
             {path:'/mall_index',component:resolve => {require(['@/home/mall_index'],resolve)}},
             // 医院医生
             {path:'/hospital_index',component:resolve => {require(['@/home/hospital_index'],resolve)}},
+            // 医院医生医院二级页面
+            {path:'/hospital_index/select_address',component:resolve => {require(['@/home/select_address'],resolve)}},
+            // 医院医生医生二级页面
+            {path:'/hospital_index/select_department',component:resolve => {require(['@/home/select_department'],resolve)}},
             // 健康报告路由
             // 我自己的
             {path:'/report_myself',component:resolve => {require(['@/healthRepor/report_myself'],resolve)}},
@@ -125,6 +129,57 @@ export default new Router({
       {path:'order_success',component:resolve => {require(['@/purchase/order_success'],resolve)}},
     ]
   },
+// 个人账户
+    {path:'/individualAccount',component:resolve => {require(['@/individualAccount/individualAccount'],resolve)}},
+    //工作账户
+    {path:'/workingAccount',component:resolve => {require(['@/workingAccount/workingAccount'],resolve)},
+    children:[
+      // 工作账户账户明细
+      {path:'/workingAccount',component:resolve => {require(['@/workingAccount/accountName'],resolve)},
+      children:[
+        // 供应商
+        // 供应商重定向
+          {path:'/',redirect:'supplier'},
+          {path:'supplier',component:resolve => {require(['@/workingAccount/supplier/supplier'],resolve)},
+          children:[
+              // 我的收益重定向
+              {path:'/',redirect:'profit'},
+              {path:'profit',component:resolve => {require(['@/workingAccount/supplier/profit'],resolve)}},
+              // 订单管理
+              {path:'ordermanagement',component:resolve => {require(['@/workingAccount/supplier/ordermanagement'],resolve)}},
+              // 库存管理
+              {path:'inventoryManagement',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement'],resolve)},
+              children:[
+                // 库存列表重定向
+                 {path:'/',redirect:'InventoryList'},
+                 {path:'InventoryList',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList'],resolve)},
+                 children:[
+                  //  全部
+                   {path:'/',redirect:'whole'},
+                   {path:'whole',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/listWhole'],resolve)}},
+                  //  已设置
+                  {path:'yset',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/listYset'],resolve)}},
+                  // 未设置
+                  {path:'wset',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/listWset'],resolve)}},
+                 ]
+               },
+                //  库存预警
+                {path:'inventoryWarning',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/inventoryWarning'],resolve)}},
+                // 可售出
+                {path:'sellOut',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut'],resolve)}},
+                // 已设置库存查看
+                {path:'ystSee',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/ysetSee'],resolve)}},
+              ]
+            },
 
+          ]
+        },
+        // 全国事业部
+          {path:'regionalBusinessUnit',component:resolve => {require(['@/workingAccount/regionalBusinessUnit/regionalBusinessUnit'],resolve)}},
+          {path:'nationalDivision',component:resolve => {require(['@/workingAccount/nationalDivision/nationalDivision'],resolve)}},
+      ]
+    },
+    ]
+  },
   ]
 })

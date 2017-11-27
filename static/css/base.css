@@ -623,6 +623,443 @@ button.close {-webkit-appearance: none; padding: 0; cursor: pointer; background:
     text-align: center;
     padding-top: 5px;
 }
+/* 选择地址*/
+.select-address {
+  padding-top: 20px;
+}
+.select-address .now span.fl {
+  width: 70px;
+  line-height: 28px;
+}
+.select-address .now .btn {
+  font-size: 18px;
+  color: #fff;
+  padding: 2px 4px;
+  line-height: 28px;
+  margin-left: 5px;
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 64px;
+  height: 28px;
+}
+.select-address .hot-city {
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+.select-address .hot-city span.fl {
+  width: 70px;
+  line-height: 30px;
+}
+.select-address .hot-city .list {
+  margin-left: 70px;
+}
+.select-address .hot-city a {
+  padding: 5px 12px;
+  float: left;
+  color: #333333;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.select-address .hot-city a:hover {
+  color: #179aff;
+  text-decoration: underline;
+}
+.select-address .select-city {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+}
+.select-address .select-city .sel {
+  width: 530px;
+  float: left;
+}
+.select-address .select-city span {
+  font-weight: bold;
+  margin-right: 10px;
+  line-height: 35px;
+}
+.select-address .select-city .choose {
+  line-height: 33px;
+  border: 1px solid #e8e8e8;
+  margin-right: 10px;
+  height: 33px;
+  width: 160px;
+}
+.select-address .select-city .btn {
+  margin-right: 40px;
+  padding: 4.5px 15px;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-top: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.select-address .select-city .form-control2 {
+  display: inline-block;
+  width: 178px;
+  margin-right: 10px;
+}
+.select-address .all-city {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.select-address .all-city dl {
+  overflow: hidden;
+  padding: 8px 20px;
+  line-height: 42px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.select-address .all-city dt {
+  float: left;
+  overflow: hidden;
+  width: 45px;
+  color: #10acff;
+}
+.select-address .all-city dd {
+  overflow: hidden;
+  margin-left: 45px;
+}
+.select-address .all-city dd a {
+  float: left;
+  color: #333333;
+  padding: 0 28px;
+  white-space: nowrap;
+}
+.select-address .all-city dd a:hover {
+  color: #179aff;
+  text-decoration: underline;
+}
+/*供应商左边nav*/
+.breadcrumb {
+    padding: 0;
+    line-height: 40px;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #10adff;
+}
+.breadcrumb>.active {
+    color: #999;
+}
+.breadcrumb>li {
+    display: inline-block;
+}
+.breadcrumb>li+li:before {
+    padding: 0 10px;
+}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: ">";
+}
+.nomargin {
+    margin-left: 0;
+    margin-right: 0;
+
+}
+.row{
+    padding-bottom: 100px;
+}
+.container .left-sidebar {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 190px;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.tab-content>.active {
+    display: block;
+}
+.left-sidebar .h_nav .clearfix.active, .left-sidebar .h_nav .clearfix:hover {
+    color: #10acff;
+    border-left: 2px solid #10adff;
+    background: url(../images/nav_bg3.png) 95% center no-repeat #e5f6fe;
+    background-size: 5px 8px;
+}
+.left-sidebar .h_nav .clearfix {
+    padding: 0 10px 0 16px;
+    line-height: 50px;
+    font-weight: normal;
+    display: block;
+    background: #fff;
+    border-left: 2px solid #fff;
+    margin-left: -2px;
+    color: #000000;
+}
+.content-wrapper {
+    padding: 0 0 10px 14px;
+}
+.col-xs-10 {
+    width: 83.33333333%;
+}
+
+/*表格通用样式*/
+/*.tabler thead {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 246, 254);
+    border-image: initial;
+}*/
+.tabler {
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(240, 240, 240);
+    border-image: initial;
+    padding: 0px 14px;
+    background: rgb(255, 255, 255);
+}
+.tabler thead {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 246, 254);
+    border-image: initial;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.tabler thead th {
+    font-weight: normal;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: rgb(229, 246, 254);
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.l_table tbody td {
+    padding: 54px 0px;
+}
+.tabler tbody td {
+    padding: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 246, 254);
+    border-image: initial;
+}
+/*我的收益部分修改表格样式*/
+.l_table tbody td:nth-of-type(1) span {
+    color: rgb(16, 173, 255);
+}
+.l_table tbody td span {
+    font-size: 20px;
+}
+.l_table tbody td:nth-of-type(2) span {
+    color: rgb(255, 162, 141);
+}
+.l_table tbody td:nth-of-type(3) span {
+    color: rgb(154, 154, 154);
+}
+.l_table tbody td {
+    padding: 54px 0px;
+    text-align: center;
+}
+.tablerr thead th {
+    font-weight: normal;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: rgb(229, 246, 254);
+}
+.tablerr tbody td {
+    padding: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 246, 254);
+    border-image: initial;
+}
+.tablerr tbody td {
+    font-size: 12px;
+}
+/*我的收益*/
+.im_tab {
+    background: #fff;
+    padding-bottom: 14px;
+}
+.im_tab .box {
+    margin: 0 14px;
+    border-bottom: 2px solid #e3e3e3;
+}
+.im_tab div.clearfix {
+    line-height: 40px;
+    height: 40px;
+    position: relative;
+}
+.im_tab div a.active, .im_tab div p.active, .im_tab div a:hover, .im_tab div p:hover {
+    border-bottom: 2px solid #44bfff;
+    color: #44bfff;
+}
+.im_tab div a, .im_tab div p {
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    background: #fff;
+    padding: 0 4%;
+    position: relative;
+}
+.sybjr_profit {
+    display: flex;
+    margin-top: 12px;
+}
+.dingdan{
+  text-align: center;
+}
+.box .clearfix p::after{
+    content: 'I';
+    position: absolute;
+    right: 0px;
+    color: #ccc;
+}
+/*订单管理*/
+.tabler-box{
+  background: #fff;
+}
+.y_orderserch{
+    background: #fff;
+}
+.form-group{
+
+  padding: 18px;
+}
+.control-label{
+  width: 60px;
+  line-height: 32px;
+}
+.selectd{
+  margin-left: 10px;
+  width: 268px;
+  height: 32px;
+  border:1px solid #e3e3e3;
+}
+.selecd{
+  margin-left: 10px;
+  width: 126px;
+  height: 32px;
+  border:1px solid #e3e3e3;
+}
+.inp{
+  margin-left: 10px;
+  width: 268px;
+  height: 32px;
+  border:1px solid #e3e3e3;
+}
+.btn-primary {
+    background: #10adff;
+    width: 30%;
+    margin-top: 1px;
+    color: #fff;
+}
+.check_all {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 14px;
+}
+.tabler tr .order_number input[type=checkbox], .check_all input[type=checkbox] {
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 10px;
+}
+.check_all .btn {
+    border: 1px solid #d9d9d9;
+    padding: 0;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    color: #333;
+    margin-left: 25px;
+    background: none;
+}
+.y_page{
+  margin-top: 20px;
+  text-align: center;
+}
+.box .clearfix div a::after{
+    content: 'I';
+    position: absolute;
+    right: 0px;
+    color: #ccc;
+}
+/*库存管理*/
+.y_orderlistnav {
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+.y_orderlistnav .tab.active {
+    color: #15a0f8;
+    border-bottom: 2px solid;
+}
+.y_ordernav_three .tab {
+    width: 33.33%;
+}
+.y_orderlistnav .tab {
+    float: left;
+    font-size: .75rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.tabler td .btn {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.btn-look {
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 7px 10px;
+    font-family: "Microsoft YaHei";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #eee;
+    color: #444;
+    border-radius: 0;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+    text-align: center;
+}
+/*已设置库存查看*/
+.h_testtit .clearfix {
+    padding: 15px;
+    background: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+.h_testtit_new .clearfix {
+    padding: 10px 15px;
+    background: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    display: block;
+}
+.h_testtit .fr {
+    font-size: .7rem;
+    color: #179aff;
+}
+.y_mb14{
+  margin-bottom: 10px;
+}
+.f_color3 {
+    color: #f23030;
+}
+
 
 /*-----全局重置结束-------*/
 /*--------盒模型兼容开始-------*/

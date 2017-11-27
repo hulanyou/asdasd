@@ -16,7 +16,8 @@
         <healthreport></healthreport>
       </div>
     </div>
-  </div><!--头部登录条 end-->
+  </div>
+  <!--头部登录条 end-->
 
   <!--头部搜索框-->
   <div class="h-header layout">
@@ -90,6 +91,24 @@ export default {
        }],
        value: ''
      }
+   },
+   methods:{
+     headershow(){
+       window.onscroll = function () {
+         let htop=document.querySelectorAll('.h-top')[0];
+        // 获取滚动条的高度
+         let winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+         if (winScroll>=100) {
+          //  console.log('大于100');
+          htop.style.display='none';
+        }else{
+            htop.style.display='block';
+        }
+   }
+     }
+   },
+   mounted(){
+     this.headershow();
    },
   //  注册组件
   components:{

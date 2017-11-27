@@ -1,8 +1,8 @@
 <template>
 <div class="">
-  <router-link to="/##" tag="a">个人账户</router-link>
-  <router-link to="/cart" tag="a">购物车</router-link>
-  <router-link to="/news" tag="a">系统消息</router-link>
+  <router-link to="/individualAccount" tag="a">个人账户</router-link>
+  <router-link to="/workingAccount" tag="a">工作账户</router-link>
+  <router-link to="/news" tag="a">购物车</router-link>
 </div>
 </template>
 
