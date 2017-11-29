@@ -1,64 +1,64 @@
 <template lang="html">
   <div class="">
     <table class="tabler y_mb20" width="100%">
-  <thead>
-    <tr>
-      <th>产品名称</th>
-      <th>产品描述</th>
-      <th>价格</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>澳洲进口Sukin/苏芊眼部抗氧化精华30ml </td>
-      <td></td>
-      <td><p class="fs20 f_color3">￥<span class="fs30">89.0</span></p></td>
-    </tr>
-  </tbody>
-</table>
-<form  method="post" id="stockForm">
-<section class="h_testtit" id="add">
-<div class="clearfix">
-<span class="col-sm-2"><b>商品库存</b></span>
-<span class="fr" @click="selShow=!selShow">+增加商品仓库</span>
-</div>
-</section>
-<section class="h_testtit_new">
-<div class="clearfix">
-<input type="hidden" name="backstageStockId" value="F0000000222">
-<span class="col-sm-2 left">仓库</span>
-<span class="col-sm-6 cen"> 全国范围 </span>
-</div>
-<div class="clearfix y_mb14">
-<span class="col-sm-2 left">库存</span>
-<span class="col-sm-6 cen"><input type="text" name="stockNum" value="10000">
-</span>
-</div>
+		<thead>
+			<tr>
+				<th>产品名称</th>
+				<th>产品描述</th>
+				<th>价格</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>测试</td>
+				<td></td>
+				<td><p class="fs20 f_color3">￥<span class="fs30">0.0</span></p></td>
+			</tr>
+		</tbody>
+	</table>
+  <form  method="post" id="stockForm">
+  <section class="h_testtit" id="add">
+  <div class="clearfix">
+  <span class="col-sm-2"><b>商品库存</b></span>
+  <span class="fr" @click="selShow=!selShow">+增加商品仓库</span>
+  </div>
+  </section>
+  <section class="h_testtit_new">
+  <div class="clearfix">
+  <input type="hidden" name="backstageStockId" value="F0000000222">
+  <span class="col-sm-2 left">仓库</span>
+  <span class="col-sm-6 cen"> 全国范围 </span>
+  </div>
+  <div class="clearfix y_mb14">
+  <span class="col-sm-2 left">库存</span>
+  <span class="col-sm-6 cen"><input type="text" name="stockNum" value="10000">
+  </span>
+  </div>
 
-<div class="h_test" v-show="selShow">
-<div class="clearfix">
-<span class="col-sm-2 left">仓库</span>
-<span class="col-sm-6 cen">
-	<span>
-		<select id="showBank">
-		<option value="F0000000291">姐姐</option><option value="F0000000302">是发</option><option value="F0000000301">dfgdfg</option><option value="F0000000222">全国范围</option></select>
-	</span>
-	</span>
-</div>
-<div class="clearfix y_mb14">
-<span class="col-sm-2 left">库存</span>
-<span class="col-sm-6 cen"><input type="text" name="stockNum" placeholder="请输入库存量"></span>
-</div>
-</div>
-<div class="bot">
-  <div class="baocunbtn">
-	<button class="btn btn-primary">保存</button>
-	<button class="btn">返回</button>
-</div>
+  <div class="h_test" v-show="selShow">
+  <div class="clearfix">
+  <span class="col-sm-2 left">仓库</span>
+  <span class="col-sm-6 cen">
+  	<span>
+  		<select id="showBank">
+  		<option value="F0000000291">姐姐</option><option value="F0000000302">是发</option><option value="F0000000301">dfgdfg</option><option value="F0000000222">全国范围</option></select>
+  	</span>
+  	</span>
+  </div>
+  <div class="clearfix y_mb14">
+  <span class="col-sm-2 left">库存</span>
+  <span class="col-sm-6 cen"><input type="text" name="stockNum" placeholder="请输入库存量"></span>
+  </div>
+  </div>
+  <div class="bot">
+    <div class="baocunbtn">
+  	<button class="btn btn-primary">保存</button>
+  	<button class="btn">返回</button>
+  </div>
 
-</div>
-</section>
-</form>
+  </div>
+  </section>
+  </form>
   </div>
 </template>
 

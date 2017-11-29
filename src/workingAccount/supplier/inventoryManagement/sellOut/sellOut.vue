@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    可售出
+      <router-view></router-view>
   </div>
 </template>
 

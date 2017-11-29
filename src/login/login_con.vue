@@ -117,21 +117,21 @@ border: 1px solid #c0c0c0;
     width: 32px;
     height: 32px;
     position: absolute;
-    left: 0px;
+    left: 14px;
     background: url(../assets/img/icons/bg_in.png) no-repeat 10px -276px;
 }
 .icon2{
   width: 32px;
   height: 32px;
   position: absolute;
-  left: 0px;
+  left: 14px;
   background: url(../assets/img/icons/bg_in.png) no-repeat 10px -312px;
 }
 .icon3{
   width: 32px;
   height: 32px;
   position: absolute;
-  left: 0px;
+  left: 14px;
   background: url(../assets/img/icons/bg_in.png) no-repeat 10px -276px;
 }
 .form-group {

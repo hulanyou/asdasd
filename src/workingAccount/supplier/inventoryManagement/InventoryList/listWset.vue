@@ -19,68 +19,10 @@
     <td>{{l.cangkuLx}}</td>
     <td>{{l.kucun}}</td>
     <td>
-      <router-link to="" tag="a" class="btn btn-look">{{l.caozuo}}</router-link>
+      <router-link to="/workingAccount/supplier/inventoryManagement/InventoryList/wsetSee" tag="a" class="btn btn-look">{{l.caozuo}}</router-link>
       </td>
   </tr>
 </tbody>
-  <!-- <tbody>
-
-  	<tr>
-  		<td>ctordinary0000000675</td>
-  		<td>测试</td>
-  		<td></td>
-  		<td></td>
-  		<td>0</td>
-  		<td><a href="/ydysmall/userbasic/toSetStock?skuNo=ctordinary0000000675" class="btn btn-look">查看</a></td>
-  	</tr>
-
-  	<tr>
-  		<td>ctordinary0000000674</td>
-  		<td>测试</td>
-  		<td></td>
-  		<td></td>
-  		<td>0</td>
-  		<td><a href="/ydysmall/userbasic/toSetStock?skuNo=ctordinary0000000674" class="btn btn-look">查看</a></td>
-  	</tr>
-
-  	<tr>
-  		<td>ctordinary0000000673</td>
-  		<td>测试</td>
-  		<td></td>
-  		<td></td>
-  		<td>0</td>
-  		<td><a href="/ydysmall/userbasic/toSetStock?skuNo=ctordinary0000000673" class="btn btn-look">查看</a></td>
-  	</tr>
-
-  	<tr>
-  		<td>ctordinary0000000672</td>
-  		<td>测试</td>
-  		<td></td>
-  		<td></td>
-  		<td>0</td>
-  		<td><a href="/ydysmall/userbasic/toSetStock?skuNo=ctordinary0000000672" class="btn btn-look">查看</a></td>
-  	</tr>
-
-  	<tr>
-  		<td>ctordinary0000000671</td>
-  		<td>测试</td>
-  		<td></td>
-  		<td></td>
-  		<td>0</td>
-  		<td><a href="/ydysmall/userbasic/toSetStock?skuNo=ctordinary0000000671" class="btn btn-look">查看</a></td>
-  	</tr>
-
-  	<tr>
-  		<td>ctordinary0000000611</td>
-  		<td>dsdsd</td>
-  		<td></td>
-  		<td></td>
-  		<td>0</td>
-  		<td><a href="/ydysmall/userbasic/toSetStock?skuNo=ctordinary0000000611" class="btn btn-look">查看</a></td>
-  	</tr>
-
-  </tbody> -->
-
   </table>
   </div>
 </template>

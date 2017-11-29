@@ -13,8 +13,7 @@
             <router-link to="/workingAccount/supplier/ordermanagement" tag="a" class="clearfix" active-class="active">订单管理</router-link>
 					<a class="clearfix  ">
 					报表统计</a>
-					<a class="clearfix">
-					员工管理</a>
+          <router-link to="/workingAccount/supplier/staffManagement" tag="a" class="clearfix" active-class="active">员工管理</router-link>
 					</section>
 					<section class="h_nav">
 					<a class="clearfix  ">

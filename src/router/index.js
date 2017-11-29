@@ -142,41 +142,120 @@ export default new Router({
           {path:'/',redirect:'supplier'},
           {path:'supplier',component:resolve => {require(['@/workingAccount/supplier/supplier'],resolve)},
           children:[
-              // 我的收益重定向
+              // 供应商我的收益重定向
               {path:'/',redirect:'profit'},
               {path:'profit',component:resolve => {require(['@/workingAccount/supplier/profit'],resolve)}},
-              // 订单管理
+              // 供应商订单管理
               {path:'ordermanagement',component:resolve => {require(['@/workingAccount/supplier/ordermanagement'],resolve)}},
-              // 库存管理
+              // 供应商员工管理
+              {path:'staffManagement',component:resolve => {require(['@/workingAccount/supplier/staffManagement'],resolve)}},
+              // 供应商库存管理
               {path:'inventoryManagement',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement'],resolve)},
               children:[
-                // 库存列表重定向
+                // 供应商库存列表重定向
                  {path:'/',redirect:'InventoryList'},
                  {path:'InventoryList',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList'],resolve)},
                  children:[
-                  //  全部
+                  //  供应商全部重定向
                    {path:'/',redirect:'whole'},
                    {path:'whole',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/listWhole'],resolve)}},
-                  //  已设置
+                   // 供应商全部列表查看
+                   {path:'wholeSee',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/wholeSee'],resolve)}},
+                  //  供应商已设置
                   {path:'yset',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/listYset'],resolve)}},
-                  // 未设置
+                  // 供应商已设置库存查看
+                  {path:'ystSee',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/ysetSee'],resolve)}},
+                  // 供应商未设置
                   {path:'wset',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/listWset'],resolve)}},
+                  // 供应商已设置库存查看
+                  {path:'wsetSee',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/wsetSee'],resolve)}},
                  ]
                },
-                //  库存预警
+                //  供应商库存预警
                 {path:'inventoryWarning',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/inventoryWarning'],resolve)}},
-                // 可售出
-                {path:'sellOut',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut'],resolve)}},
-                // 已设置库存查看
-                {path:'ystSee',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/InventoryList/ysetSee'],resolve)}},
+                // 供应商可售出
+                {path:'sellOut',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut/sellOut'],resolve)},
+                children:[
+                  // 供应商可售出重定向
+                  {path:'/',redirect:'sellOutCon'},
+                  {path:'sellOutCon',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut/sellOutCon'],resolve)}},
+                  // 供应商可售出添加仓库
+                  {path:'saddWarehouse',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut/saddWarehouse'],resolve)}},
+                  // 供应商设置可售区域
+                  {path:'availableArea',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut/availableArea'],resolve)}},
+                  // 增加仓库可售区域
+                  {path:'addSaleAreaWarehouse',component:resolve => {require(['@/workingAccount/supplier/inventoryManagement/sellOut/addSaleAreaWarehouse'],resolve)}},
+                ]
+              },
+
               ]
             },
-
           ]
         },
-        // 全国事业部
-          {path:'regionalBusinessUnit',component:resolve => {require(['@/workingAccount/regionalBusinessUnit/regionalBusinessUnit'],resolve)}},
-          {path:'nationalDivision',component:resolve => {require(['@/workingAccount/nationalDivision/nationalDivision'],resolve)}},
+          // 全国事业部
+          {path:'nationalDivision',component:resolve => {require(['@/workingAccount/nationalDivision/nationalDivision'],resolve)},
+          children:[
+            // 全国事业部员工管理
+              {path:'/',redirect:'qStaffManagement'},
+              {path:'qStaffManagement',component:resolve => {require(['@/workingAccount/supplier/staffManagement'],resolve)}},
+              // 全国事业部我的收益
+              {path:'qProfit',component:resolve => {require(['@/workingAccount/nationalDivision/profit'],resolve)}},
+              //全国事业部绑定全国助销机构
+              {path:'pdwholhMechanism',component:resolve => {require(['@/workingAccount/nationalDivision/pdwholhMechanism'],resolve)},
+              children:[
+                //全国事业部绑定全国助销机构内容
+                {path:'/',redirect:'qStaffManagementCon'},
+                {path:'qStaffManagementCon',component:resolve => {require(['@/workingAccount/nationalDivision/qStaffManagementCon'],resolve)}},
+                // 全国事业部绑定全国助销机点击跳转事业部列表
+                {path:'qStaffManagementConsy',component:resolve => {require(['@/workingAccount/nationalDivision/qStaffManagementConsy'],resolve)}},
+                // 全国事业部绑定全国助销机点击跳转商品列表
+                {path:'qStaffManagementConsp',component:resolve => {require(['@/workingAccount/nationalDivision/qStaffManagementConsp'],resolve)}},
+                // 全国事业部绑定全国助销机点击绑定成功
+                {path:'bindingSuccess',component:resolve => {require(['@/workingAccount/nationalDivision/bindingSuccess'],resolve)}},
+              ]
+            },
+          ]
+        },
+        // 专家医生
+        {path:'expertDoctor',component:resolve => {require(['@/workingAccount/expertDoctor/expertDoctor'],resolve)},
+        children:[
+          // 专家医生我的收益
+          {path:'/',redirect:'zjqProfit'},
+          {path:'zjqProfit',component:resolve => {require(['@/workingAccount/supplier/profit'],resolve)}},
+          // 专家医生订单管理
+          {path:'zjordermanagement',component:resolve => {require(['@/workingAccount/supplier/ordermanagement'],resolve)}},
+          // 专家医生我的药品库
+          {path:'myDrugStoreCon',component:resolve => {require(['@/workingAccount/expertDoctor/myDrugStoreCon'],resolve)},
+          children:[
+            //专家医生未添加
+            {path:'/',redirect:'waddmyDrugStore'},
+            {path:'waddmyDrugStore',component:resolve => {require(['@/workingAccount/expertDoctor/waddmyDrugStore'],resolve)}},
+            // 专家医生药品选择列表
+            {path:'myDrugStoreList',component:resolve => {require(['@/workingAccount/expertDoctor/myDrugStoreList'],resolve)}},
+            // 专家医生添加成功
+            {path:'addSuccess',component:resolve => {require(['@/workingAccount/expertDoctor/addSuccess'],resolve)}},
+          ]
+        },
+        ]
+      },
+      // 家庭医生管理员
+      {path:'fmilyDoctorCon',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorCon'],resolve)},
+      children:[
+        // 家庭医生订单管理
+        {path:'/',redirect:'jtordermanagement'},
+        {path:'jtordermanagement',component:resolve => {require(['@/workingAccount/supplier/ordermanagement'],resolve)}},
+        // 家庭医生我的收益
+        {path:'jtqProfit',component:resolve => {require(['@/workingAccount/supplier/profit'],resolve)}},
+        // 家庭医生医院管理
+        {path:'hospitalManagementCon',component:resolve => {require(['@/workingAccount/fmilyDoctor/hospitalManagementCon'],resolve)},
+        children:[
+          // 家庭医生医院管理重定向
+        {path:'/',redirect:'hospitalManagement'},
+        {path:'hospitalManagement',component:resolve => {require(['@/workingAccount/fmilyDoctor/hospitalManagement'],resolve)}},
+        ]
+      },
+      ]
+    },
       ]
     },
     ]

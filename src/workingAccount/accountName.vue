@@ -3,8 +3,9 @@
   <div class="user_tab_con clearfix">
    <ul class="user_tab clearfix flex" role="tablist">
        <router-link to="/workingAccount/supplier" tag="li" active-class="active">供应商</router-link>
-       <router-link to="/workingAccount/regionalBusinessUnit" tag="li"  active-class="active">区域事业部</router-link>
-       <router-link to="/workingAccount/nationalDivision" tag="li"  active-class="active">全国事业部</router-link>
+       <router-link to="/workingAccount/nationalDivision" tag="li"  active-class="active">全国事业部-总经理</router-link>
+       <router-link to="/workingAccount/expertDoctor" tag="li"  active-class="active">专家医生</router-link>
+       <router-link to="/workingAccount/fmilyDoctorCon" tag="li"  active-class="active">家庭医生管理员</router-link>
    </ul>
  </div>
    <router-view></router-view>

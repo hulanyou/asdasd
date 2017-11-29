@@ -19,7 +19,7 @@
     <td>{{i.cangkuLx}}</td>
     <td>{{i.kucun}}</td>
     <td>
-      <router-link to="" tag="a" class="btn btn-look">{{i.caozuo}}</router-link>
+      <router-link to="/workingAccount/supplier/inventoryManagement/InventoryList/wholeSee" tag="a" class="btn btn-look">{{i.caozuo}}</router-link>
       </td>
   </tr>
 </tbody>

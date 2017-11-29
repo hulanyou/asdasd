@@ -258,6 +258,9 @@ img {
 .m_mt30 {
   margin-top: 30px;
 }
+.mr6 {
+    margin-right: 6%;
+}
 .m_mt100 {
   margin-top: 100px;
 }
@@ -930,7 +933,6 @@ tbody {
     background: #fff;
 }
 .form-group{
-
   padding: 18px;
 }
 .control-label{
@@ -1058,6 +1060,57 @@ td, th {
 }
 .f_color3 {
     color: #f23030;
+}
+.f_color1 {
+    color: #ff604c;
+}
+.z_ml10_r {
+    margin-left: 40px;
+}
+
+/*单选框组件*/
+.cbox{display:block;width:16px;height:16px;border:1px solid #ccc;background:#fff;position: relative;}
+ .cbox.checked{background:#10adff;}
+ .cbox.checked:after{content:"√";color: #FFFFFF;position: absolute;left: 3px;top: -3px;}
+/*我的药品库助销机构*/
+.h_testtit{
+  background: #fff;
+  padding: 18px 14px;
+}
+.h_testtit .scuccess-img{
+  width: 100%;
+  margin-top: 84px;
+}
+.h_testtit .scuccess-img img{
+  padding-left: 40%;
+}
+.bd-formCon{
+  padding: 20px 14px;
+}
+.formcon-t{
+  margin-top: 14px;
+}
+.conbox{
+  margin-left: 246px;
+}
+.formcon input,.formcon-t input {
+    width: 20%;
+    height: 19px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 }
 
 
