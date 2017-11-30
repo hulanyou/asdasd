@@ -234,6 +234,8 @@ export default new Router({
                 {path:'qStaffManagementConsp',component:resolve => {require(['@/workingAccount/nationalDivision/qStaffManagementConsp'],resolve)}},
                 // 全国事业部绑定全国助销机点击绑定成功
                 {path:'bindingSuccess',component:resolve => {require(['@/workingAccount/nationalDivision/bindingSuccess'],resolve)}},
+                // 全国事业部绑定全国助销机点击绑定失败
+                {path:'bindingshibai',component:resolve => {require(['@/workingAccount/nationalDivision/bindingshibai'],resolve)}},
               ]
             },
           ]
@@ -256,6 +258,8 @@ export default new Router({
             {path:'myDrugStoreList',component:resolve => {require(['@/workingAccount/expertDoctor/myDrugStoreList'],resolve)}},
             // 专家医生添加成功
             {path:'addSuccess',component:resolve => {require(['@/workingAccount/expertDoctor/addSuccess'],resolve)}},
+            // 专家医生添加失败
+            {path:'addFail',component:resolve => {require(['@/workingAccount/expertDoctor/addFail'],resolve)}},
           ]
         },
         ]
@@ -274,6 +278,27 @@ export default new Router({
           // 家庭医生医院管理重定向
         {path:'/',redirect:'hospitalManagement'},
         {path:'hospitalManagement',component:resolve => {require(['@/workingAccount/fmilyDoctor/hospitalManagement'],resolve)}},
+        // 家庭医生医生管理没添加科室
+        {path:'seeDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/seeDepartment'],resolve)}},
+        // 家庭医生医生管理添加一级科室
+        {path:'addOneDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/addOneDepartment'],resolve)}},
+        // 家庭医生医生管理添加一级科室成功
+        {path:'fmilyDoctorAddOneSuccess',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddOneSuccess'],resolve)}},
+        // 家庭医生医生管理添加一级科室失败
+        {path:'fmilyDoctorAddOneFail',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddOneFail'],resolve)}},
+        // 家庭医生医生管理添加二级科室
+        {path:'addTwoDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/addTwoDepartment'],resolve)}},
+        // 家庭医生医生管理添加二级科室成功
+        {path:'fmilyDoctorAddTwoSuccess',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddTwoSuccess'],resolve)}},
+        // 家庭医生医生管理添加一级科室成功
+        {path:'fmilyDoctorAddTwoFail',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddTwoFail'],resolve)}},
+        // 家庭医生医生管理添加三级科室
+        {path:'addThreeDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/addThreeDepartment'],resolve)}},
+        // 家庭医生医生管理添加三级科室成功
+        {path:'fmilyDoctorAddThreeSuccess',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddThreeSuccess'],resolve)}},
+        // 家庭医生医生管理添加三级科室失败
+        {path:'lookDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/lookDepartment'],resolve)}},
+
         ]
       },
       ]

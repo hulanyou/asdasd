@@ -145,7 +145,6 @@ td .cbox{
 }
 thead{
   border-color: #e3e3e3;
-
 }
 .col_12{
   color: #10adff;

@@ -43,7 +43,7 @@ export default {
 }
 .btn-primary {
     background: #10adff;
-    width: 12%;
+    width: 10%;
     margin-top: 1px;
     color: #fff;
     margin-left: -5px;

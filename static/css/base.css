@@ -1094,7 +1094,7 @@ td, th {
   margin-left: 246px;
 }
 .formcon input,.formcon-t input {
-    width: 20%;
+    width: 22%;
     height: 19px;
     padding: 6px 12px;
     font-size: 14px;
@@ -1112,7 +1112,14 @@ td, th {
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 }
-
+.h_testtit li{
+  padding: 14px;
+  border: 1px solid #e3e3e3;
+  background: url(../../assets/img/qg_mdri.png) no-repeat 98.5%;
+}
+.h_testtit li a{
+  padding-right: 20px;
+}
 
 /*-----全局重置结束-------*/
 /*--------盒模型兼容开始-------*/

@@ -75,15 +75,13 @@ export default {
   height: 300px;
   overflow: auto;
   margin-top: 14px;
-  background: #fff;
-  padding: 18px 14px;
 }
-li{
+.h_testtit li{
   padding: 14px;
   border: 1px solid #e3e3e3;
   background: url(../../assets/img/qg_mdri.png) no-repeat 98.5%;
 }
-li a{
+.h_testtit li a{
   padding-right: 20px;
 }
 .block{
