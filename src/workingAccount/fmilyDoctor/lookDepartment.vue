@@ -8,9 +8,11 @@
       </div>
       <div class="looK_content">
         <div class="con-box" v-for="i in lists">
-          <p class="oneDepartment flex flex_jus_between"><span>{{i.title}}</span> <span>></span></p>
-          <div class="twoDepartment" v-for="j in i.arr">
-            <p>{{j.name}}</p>
+          <p class="oneDepartment flex flex_jus_between"><span class="title">{{i.title}}</span> <span class="listsshow">></span></p>
+          <div class="twoDepartment_box">
+            <div class="twoDepartment" v-for="j in i.arr">
+              <p>{{j.name}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -98,13 +100,34 @@ export default {
         ]}
       ]
     }
+  },
+  methods:{
+    listshow(){
+      let lists=document.querySelectorAll('.listsshow');
+      let twoDepartment=document.querySelectorAll('.twoDepartment_box');
+      let title=document.querySelectorAll('.title');
+      for (let i = 0; i < lists.length; i++) {
+        lists[i].onclick=()=>{
+          if (lists[i].style.WebkitTransform !="rotate(90deg)") {
+            lists[i].style.WebkitTransform="rotate(90deg)";
+            lists[i].style.color="#10adff";
+            twoDepartment[i].style.display="block";
+            twoDepartment[i].classList.add("fadeIn");
+            title[i].style.color="#10adff";
+          }else{
+              lists[i].style.color="#000";
+              lists[i].style.WebkitTransform ="rotate(0deg)";
+              twoDepartment[i].style.display="none";
+                title[i].style.color="#000";
+          }
+        }
+      }
+    }
+  },
+  mounted(){
+    this.listshow();
   }
-  // mounted(){
-  //   for(let temp of this.lists){
-  //     this.arraa= temp.arr;
-  //     console.log(this.arraa);
-  //   }
-  // }
+
 }
 </script>
 
@@ -149,8 +172,10 @@ export default {
 .twoDepartment:first-child{
   display:block;
 }
+.twoDepartment_box{
+  display:none;
+}
 .twoDepartment{
-  /*display:none;*/
   /*border-top:1px solid #e3e3e3;*/
   padding-left:70px;
 }
