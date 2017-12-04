@@ -16,8 +16,9 @@
           <router-link to="" tag="a" class="clearfix">我的用户</router-link>
 					</section>
 					<section class="h_nav">
-					<a class="clearfix  ">
-					 服务设置</a>
+          <router-link to="/workingAccount/expertDoctor/serviceSettings" tag="a" class="clearfix" active-class="active">服务设置</router-link>
+					<!-- <a class="clearfix  ">
+					 服务设置</a> -->
 					<a class="clearfix">
 					 培训直播</a>
 					<a class="clearfix">

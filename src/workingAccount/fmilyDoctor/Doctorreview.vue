@@ -10,7 +10,7 @@
       			<th width="20%">医生职称</th>
             <th width="20%">操作</th>
       		</tr>
-      	</thead>?
+      	</thead>
       </table>
       <table width="100%" class="orderlist tabler">
       	<tbody>

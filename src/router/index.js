@@ -238,6 +238,14 @@ export default new Router({
                 {path:'bindingshibai',component:resolve => {require(['@/workingAccount/nationalDivision/bindingshibai'],resolve)}},
               ]
             },
+            // 全国事业部供应商审核
+            {path:'supplierToExamine',component:resolve => {require(['@/workingAccount/nationalDivision/supplierToExamine'],resolve)}},
+            // 全国事业部价格审核
+            {path:'priceToExamine',component:resolve => {require(['@/workingAccount/nationalDivision/priceToExamine'],resolve)}},
+            // 全国事业部商品审核
+            {path:'commodityToExamine',component:resolve => {require(['@/workingAccount/nationalDivision/commodityToExamine'],resolve)}},
+            // 全国事业部供应商审核
+            {path:'supplierArchivesSh',component:resolve => {require(['@/workingAccount/nationalDivision/supplierArchivesSh'],resolve)}},
           ]
         },
         // 专家医生
@@ -262,6 +270,8 @@ export default new Router({
             {path:'addFail',component:resolve => {require(['@/workingAccount/expertDoctor/addFail'],resolve)}},
           ]
         },
+        // 专家医生服务设置
+        {path:'serviceSettings',component:resolve => {require(['@/workingAccount/expertDoctor/serviceSettings'],resolve)}},
         ]
       },
       // 家庭医生管理员
@@ -310,6 +320,8 @@ export default new Router({
           {path:'doctorDetails',component:resolve => {require(['@/workingAccount/fmilyDoctor/doctorDetails'],resolve)}},
       ]
     },
+    // 家庭医生管理员医生管理
+    {path:'doctorToExamine',component:resolve => {require(['@/workingAccount/fmilyDoctor/doctorToExamine'],resolve)}},
       ]
     },
       ]

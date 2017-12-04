@@ -17,7 +17,7 @@
 					<section class="h_nav">
 					 <router-link to="/workingAccount/fmilyDoctorCon/hospitalManagementCon" tag="a" class="clearfix" active-class="active">医院管理</router-link>
 					 <router-link to="/workingAccount/fmilyDoctorCon/DoctorreviewCon" tag="a" class="clearfix" active-class="active">医生审核</router-link>
-		       <router-link to="" tag="a" class="clearfix">医生管理</router-link>
+		       <router-link to="/workingAccount/fmilyDoctorCon/doctorToExamine" tag="a" class="clearfix" active-class="active">医生管理</router-link>
            <router-link to="" tag="a" class="clearfix">添加医院</router-link>
            <router-link to="" tag="a" class="clearfix">我要申请升级</router-link>
 				</section>
