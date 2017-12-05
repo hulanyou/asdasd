@@ -139,10 +139,10 @@
       </td>
         <td>
   		<nav class="y_orderltbtnbx">
-  		<!-- 待付款状态 -->
-      <a href="#" class="btn btn-custom5 btn-sm">
+  		<!-- 待付款状态 <router-link to="" tag="a"></router-link> -->
+      <router-link to="/individualAccount/serviceOrder" tag="a" class="btn btn-custom5 btn-sm">
         	  立即付款
-          </a>
+          </router-link>
   		<a href="#cancellationOrder_07104acb12384311b10bb07fc6c7b338" data-toggle="modal" class="btn btn-link2">取消订单</a>
       <a href="#cancellationOrder_07104acb12384311b10bb07fc6c7b338" data-toggle="modal" class="btn btn-link2">查看地图</a>
   		</nav>

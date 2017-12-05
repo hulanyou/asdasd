@@ -136,7 +136,6 @@ export default new Router({
       children:[
         //个人账户页面里的第二个头部
         {path:'/individualAccount',component:resolve => {require(['@/individualAccount/personalAccount'],resolve)},
-
           children:[
               //个人账户页面的重定向（左侧的按钮包括订单等）
                {path:'/',redirect:'myOrder'},
@@ -144,12 +143,13 @@ export default new Router({
                   children:[
                     //个人账户的我的订单列表
                       {path:'/',redirect:'lineItem'},
-                        {path:'lineItem',component:resolve => {require(['@/individualAccount/myOrder/lineItem'],resolve)}},
+                      {path:'lineItem',component:resolve => {require(['@/individualAccount/myOrder/lineItem'],resolve)}},
                   ]
-             },
+                },
+                //个人账户的服务订单页面
+                {path:'serviceOrder',component:resolve => {require(['@/individualAccount/serviceOrder'],resolve)}},
           ]
       },
-
       ]
   },
 
