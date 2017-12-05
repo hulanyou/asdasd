@@ -5,17 +5,17 @@
       <div class="bd-formCon">
         <div class="formcon">
           <a>
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" placeholder="请输入地区名称">
             <span class="btn btn-primary">地区搜索</span>
           </a>
           <a class="conbox">
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" placeholder="请输入事业部名称">
             <span class="btn btn-primary">事业部搜索</span>
           </a>
         </div>
         <div class="formcon-t">
           <a>
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" placeholder="请输入商品名称">
             <span class="btn btn-primary">商品搜索</span>
           </a>
         </div>
@@ -36,7 +36,7 @@ export default {
 <style lang="css" scoped>
 .btn-primary {
     background: #10adff;
-    width: 12%;
+    width: 10%;
     margin-top: 1px;
     color: #fff;
     margin-left: -5px;

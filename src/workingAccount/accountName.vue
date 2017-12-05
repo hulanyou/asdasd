@@ -30,7 +30,8 @@ export default {
     text-align: center;
 }
 .user_tab li {
-  width: 160px;
+  /*width: 160px;*/
+  padding: 0 26px;
   text-align: ccenter;
   position: relative;
 }

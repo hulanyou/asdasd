@@ -12,13 +12,13 @@
             <router-link to="/workingAccount/nationalDivision/qStaffManagement" tag="a" class="clearfix" active-class="active">员工管理</router-link>
             <router-link to="/workingAccount/nationalDivision/qProfit" tag="a" class="clearfix" active-class="active">我的收益</router-link>
             <router-link to="/workingAccount/nationalDivision/pdwholhMechanism" tag="a" class="clearfix" active-class="active">绑定全国助销机构</router-link>
-				  <router-link to="" tag="a" class="clearfix">供应商审核</router-link>
+				  <router-link to="/workingAccount/nationalDivision/supplierToExamine" tag="a" class="clearfix" active-class="active">供应商审核</router-link>
 					</section>
 					<section class="h_nav">
 					 <router-link to="" tag="a" class="clearfix">商品管理</router-link>
-					 <router-link to="" tag="a" class="clearfix">价格审核</router-link>
-		       <router-link to="" tag="a" class="clearfix">商品审核</router-link>
-           <router-link to="" tag="a" class="clearfix">供应商档案</router-link>
+					 <router-link to="/workingAccount/nationalDivision/priceToExamine" tag="a" class="clearfix" active-class="active">价格审核</router-link>
+		       <router-link to="/workingAccount/nationalDivision/commodityToExamine" tag="a" class="clearfix" active-class="active">商品审核</router-link>
+           <router-link to="/workingAccount/nationalDivision/supplierArchivesSh" tag="a" class="clearfix">供应商档案</router-link>
 				</section>
   			</div>
   		</div>

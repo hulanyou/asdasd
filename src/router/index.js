@@ -234,8 +234,18 @@ export default new Router({
                 {path:'qStaffManagementConsp',component:resolve => {require(['@/workingAccount/nationalDivision/qStaffManagementConsp'],resolve)}},
                 // 全国事业部绑定全国助销机点击绑定成功
                 {path:'bindingSuccess',component:resolve => {require(['@/workingAccount/nationalDivision/bindingSuccess'],resolve)}},
+                // 全国事业部绑定全国助销机点击绑定失败
+                {path:'bindingshibai',component:resolve => {require(['@/workingAccount/nationalDivision/bindingshibai'],resolve)}},
               ]
             },
+            // 全国事业部供应商审核
+            {path:'supplierToExamine',component:resolve => {require(['@/workingAccount/nationalDivision/supplierToExamine'],resolve)}},
+            // 全国事业部价格审核
+            {path:'priceToExamine',component:resolve => {require(['@/workingAccount/nationalDivision/priceToExamine'],resolve)}},
+            // 全国事业部商品审核
+            {path:'commodityToExamine',component:resolve => {require(['@/workingAccount/nationalDivision/commodityToExamine'],resolve)}},
+            // 全国事业部供应商审核
+            {path:'supplierArchivesSh',component:resolve => {require(['@/workingAccount/nationalDivision/supplierArchivesSh'],resolve)}},
           ]
         },
         // 专家医生
@@ -256,26 +266,62 @@ export default new Router({
             {path:'myDrugStoreList',component:resolve => {require(['@/workingAccount/expertDoctor/myDrugStoreList'],resolve)}},
             // 专家医生添加成功
             {path:'addSuccess',component:resolve => {require(['@/workingAccount/expertDoctor/addSuccess'],resolve)}},
+            // 专家医生添加失败
+            {path:'addFail',component:resolve => {require(['@/workingAccount/expertDoctor/addFail'],resolve)}},
           ]
         },
+        // 专家医生服务设置
+        {path:'serviceSettings',component:resolve => {require(['@/workingAccount/expertDoctor/serviceSettings'],resolve)}},
         ]
       },
       // 家庭医生管理员
       {path:'fmilyDoctorCon',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorCon'],resolve)},
       children:[
-        // 家庭医生订单管理
+        // 家庭医生管理员订单管理
         {path:'/',redirect:'jtordermanagement'},
         {path:'jtordermanagement',component:resolve => {require(['@/workingAccount/supplier/ordermanagement'],resolve)}},
-        // 家庭医生我的收益
+        // 家庭医生管理员我的收益
         {path:'jtqProfit',component:resolve => {require(['@/workingAccount/supplier/profit'],resolve)}},
-        // 家庭医生医院管理
+        // 家庭医生管理员医院管理
         {path:'hospitalManagementCon',component:resolve => {require(['@/workingAccount/fmilyDoctor/hospitalManagementCon'],resolve)},
         children:[
-          // 家庭医生医院管理重定向
+          // 家庭医生管理员医院管理重定向
         {path:'/',redirect:'hospitalManagement'},
         {path:'hospitalManagement',component:resolve => {require(['@/workingAccount/fmilyDoctor/hospitalManagement'],resolve)}},
+        // 家庭医生管理员医生管理没添加科室
+        {path:'seeDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/seeDepartment'],resolve)}},
+        // 家庭医生管理员医生管理添加一级科室
+        {path:'addOneDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/addOneDepartment'],resolve)}},
+        // 家庭医生管理员医生管理添加一级科室成功
+        {path:'fmilyDoctorAddOneSuccess',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddOneSuccess'],resolve)}},
+        // 家庭医生管理员医生管理添加一级科室失败
+        {path:'fmilyDoctorAddOneFail',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddOneFail'],resolve)}},
+        // 家庭医生管理员医生管理添加二级科室
+        {path:'addTwoDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/addTwoDepartment'],resolve)}},
+        // 家庭医生管理员医生管理添加二级科室成功
+        {path:'fmilyDoctorAddTwoSuccess',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddTwoSuccess'],resolve)}},
+        // 家庭医生管理员医生管理添加一级科室成功
+        {path:'fmilyDoctorAddTwoFail',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddTwoFail'],resolve)}},
+        // 家庭医生管理员医生管理添加三级科室
+        {path:'addThreeDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/addThreeDepartment'],resolve)}},
+        // 家庭医生管理员医生管理添加三级科室成功
+        {path:'fmilyDoctorAddThreeSuccess',component:resolve => {require(['@/workingAccount/fmilyDoctor/fmilyDoctorAddThreeSuccess'],resolve)}},
+        // 家庭医生管理员医生管理添加三级科室失败
+        {path:'lookDepartment',component:resolve => {require(['@/workingAccount/fmilyDoctor/lookDepartment'],resolve)}},
         ]
       },
+      // 家庭医生管理员医生管理医生审核
+      {path:'DoctorreviewCon',component:resolve => {require(['@/workingAccount/fmilyDoctor/DoctorreviewCon'],resolve)},
+      children:[
+          // 家庭医生管理员医生管理医生审核重定向
+          {path:'/',redirect:'Doctorreview'},
+          {path:'Doctorreview',component:resolve => {require(['@/workingAccount/fmilyDoctor/Doctorreview'],resolve)}},
+          // 家庭医生管理员医生管理医生审核已审核医生资料详情
+          {path:'doctorDetails',component:resolve => {require(['@/workingAccount/fmilyDoctor/doctorDetails'],resolve)}},
+      ]
+    },
+    // 家庭医生管理员医生管理
+    {path:'doctorToExamine',component:resolve => {require(['@/workingAccount/fmilyDoctor/doctorToExamine'],resolve)}},
       ]
     },
       ]
