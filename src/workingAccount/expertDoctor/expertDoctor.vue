@@ -13,7 +13,7 @@
             <router-link to="/workingAccount/expertDoctor/zjordermanagement" tag="a" class="clearfix" active-class="active">用户订单</router-link>
 					<a class="clearfix  ">
 					处方药审核订单池</a>
-          <router-link to="" tag="a" class="clearfix">我的用户</router-link>
+          <router-link to="/workingAccount/expertDoctor/exper_userListCon" tag="a" class="clearfix" active-class="active">我的用户</router-link>
 					</section>
 					<section class="h_nav">
           <router-link to="/workingAccount/expertDoctor/serviceSettings" tag="a" class="clearfix" active-class="active">服务设置</router-link>
